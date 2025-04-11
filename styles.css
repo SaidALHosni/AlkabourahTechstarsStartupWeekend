@@ -144,17 +144,21 @@ body {
     color: var(--dark);
 }
 
-/* Hero Section */
-/* In your CSS file */
+/* Hero Section - Complete Styles */
 .hero {
     position: relative;
     height: 100vh;
     min-height: 700px;
     overflow: hidden;
     padding-top: 80px; /* Prevents navbar overlap */
-    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
 }
 
+/* Background Image */
 .hero-background {
     position: absolute;
     top: 0;
@@ -164,6 +168,8 @@ body {
     object-fit: cover;
     z-index: 1;
 }
+
+/* Gradient Overlay */
 .hero-gradient-overlay {
     position: absolute;
     top: 0;
@@ -173,26 +179,18 @@ body {
     background: linear-gradient(135deg, rgba(67, 97, 238, 0.7) 0%, rgba(58, 86, 213, 0.7) 100%);
     z-index: 2;
 }
+
+/* Content Container */
 .hero-content {
     position: relative;
     z-index: 3;
-    /* Your existing hero-content styles */
-}
-
-/* Navbar fix */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    /* Your existing navbar styles */
-}
-
-.hero-content {
     max-width: 800px;
     margin: 0 auto;
+    padding: 0 20px;
+    animation: fadeInUp 1s ease forwards;
 }
 
+/* Title */
 .hero-title {
     font-size: 3.5rem;
     font-weight: 700;
@@ -201,6 +199,7 @@ body {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Subtitle */
 .hero-subtitle {
     font-size: 1.5rem;
     margin-bottom: 30px;
@@ -208,6 +207,7 @@ body {
     opacity: 0.9;
 }
 
+/* Date */
 .hero-date {
     display: inline-block;
     background: rgba(255, 255, 255, 0.2);
@@ -216,42 +216,54 @@ body {
     font-weight: 500;
     margin-bottom: 40px;
     backdrop-filter: blur(5px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.2s;
 }
 
-/* Hero Navigation */
-.hero-nav {
-    position: absolute;
-    bottom: 40px;
+/* Button */
+.btn-outline {
+    display: inline-block;
+    padding: 15px 30px;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: #4361ee;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navbar Fix */
+.navbar {
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+    background: linear-gradient(135deg, rgba(67, 97, 238, 0.7) 0%, rgba(58, 86, 213, 0.7) 100%);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-
-.hero-nav-link {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 30px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(5px);
-    transition: var(--transition);
-    font-weight: 500;
-    font-size: 0.9rem;
-}
-
-.hero-nav-link:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: translateY(-3px);
-}
-
-.hero-nav-link.active {
-    background: white;
-    color: var(--primary) !important;
-}
-
 /* About Section */
 .about-content {
     display: flex;
