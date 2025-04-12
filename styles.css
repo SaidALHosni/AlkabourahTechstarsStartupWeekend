@@ -145,6 +145,14 @@ body {
 }
 
 /* Hero Section - Complete Styles */
+.one {
+  border: 1px solid black;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+  background-color: lightblue;
+}
 .hero {
     position: relative;
     height: 100vh;
