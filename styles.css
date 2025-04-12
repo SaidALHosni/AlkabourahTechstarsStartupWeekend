@@ -202,6 +202,7 @@ body {
     margin-bottom: 20px;
     line-height: 1.2;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* Subtitle */
@@ -210,6 +211,7 @@ body {
     margin-bottom: 30px;
     font-weight: 300;
     opacity: 0.9;
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* Date */
